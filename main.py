@@ -37,8 +37,8 @@ async def download_file(request: Request):
     result = FileResponse(path=path, filename=file_name, media_type='application/octet-stream')
     return result
 
-if __name__ == "__main__":
-    print("Starting DeTrain agent")
+# if __name__ == "__main__":
+#     print("Starting DeTrain agent")
     # subprocess.Popen("fuser -k 5000/tcp;killall gunicorn", stdout=subprocess.PIPE, shell=True)
-    subprocess.Popen("gunicorn -w 1 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:5000 main:app --daemon", stdout=subprocess.PIPE, shell=True)
-    print("Agent is started")
+    # subprocess.Popen("gunicorn -w 1 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:5000 main:app --daemon", stdout=subprocess.PIPE, shell=True)
+    # print("Agent is started")
